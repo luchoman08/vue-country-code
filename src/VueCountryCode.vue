@@ -65,10 +65,11 @@
   .dropdown {
     display: flex;
     flex-direction: column;
-    align-content: center;
+    align-items: center;
     justify-content: center;
+    height: 100%;
+    padding: 0.5em;
     position: relative;
-    padding: 7px;
     cursor: pointer;
     &.open {
       background-color: #f3f3f3;
@@ -86,7 +87,7 @@
     max-height: 200px;
     overflow-y: scroll;
     position: absolute;
-    top: 33px;
+    top: 100%;
     left: -1px;
     background-color: #fff;
     border: 1px solid #ccc;
