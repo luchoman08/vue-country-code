@@ -27,9 +27,9 @@ Checkout Demo at [Github pages](https://mon-imitator.github.io/vue-country-code/
 
   ```javascript
   import Vue from "vue";
-  import VueTelInput from "vue-country-code";
+  import VueCountryCode from "vue-country-code";
 
-  Vue.use(VueTelInput);
+  Vue.use(VueCountryCode);
   ```
 
 - In your component:
@@ -37,18 +37,17 @@ Checkout Demo at [Github pages](https://mon-imitator.github.io/vue-country-code/
   ```js
   <template>
   ...
-     <vue-tel-input
+     <vue-country-code
                     @onSelect="onSelect(country)"
                     <!-- optional -->
-                    :preferredCountries="['us', 'gb', 'ua']">
-     </vue-tel-input>
+                    :preferredCountries="['vn', 'us', 'gb']">
+     </vue-country-code>
   ...
   <template>
   <script>
   export default {
     data() {
       return {
-        phone: '',
       };
     },
     methods: {
@@ -110,10 +109,5 @@ $ yarn/npm dist:demo
 $ yarn/npm dist
 
 ```
-
-## Contributors
-
-- [mikob](https://github.com/mikob) for super awesome work to [remove the bootstrap dependency](https://github.com/EducationLink/vue-tel-input/pull/13).
-- [kalcifield](https://github.com/kalcifield) for helping make the input [preload with a phone number](https://github.com/EducationLink/vue-tel-input/pull/8).
 
 Made by [Møn ImitatØr](https://github.com/Mon-Imitator).
