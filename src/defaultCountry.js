@@ -1,6 +1,6 @@
 import getJSON from 'get-json';
 
-const getCountry = function () {
+const getCountry = () => {
   return new Promise((resolve, reject) => {
     getJSON('https://ipinfo.io/json', (error, response) => {
       if (error) {

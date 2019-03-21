@@ -1,11 +1,11 @@
 import Vue from 'vue';
-import VueTelInput from '../dist/vue-tel-input';
+import VueCountryCode from '../dist/vue-country-code';
 
-import '../dist/vue-tel-input.css';
+import '../dist/vue-country-code.css';
 
 import App from './App.vue';
 
-Vue.use(VueTelInput);
+Vue.use(VueCountryCode);
 
 Vue.config.productionTip = false;
 
