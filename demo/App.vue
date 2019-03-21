@@ -4,8 +4,8 @@
     <h2 style="color: #999">made with &#x2764; by Møn ImitatØr.</h2>
     <div style="margin: 20px auto;">
       <vue-country-code
-        @onChange="onChange"
-        :preferredCountries="['us', 'gb', 'ua']"
+        @onSelect="onSelect"
+        :preferredCountries="['vn', 'us', 'gb']"
       ></vue-country-code>
     </div>
     <div><code>{{ selectedCountry }}</code></div>
@@ -21,7 +21,7 @@ export default {
     };
   },
   methods: {
-    onChange(data) {
+    onSelect(data) {
       this.selectedCountry = data;
     }
   }

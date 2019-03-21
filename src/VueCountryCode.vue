@@ -173,10 +173,6 @@ export default {
       type: Array,
       default: () => []
     },
-    name: {
-      type: String,
-      default: "telephone"
-    },
     dropdownOptions: {
       type: Object,
       default: () => ({})
@@ -188,9 +184,6 @@ export default {
   },
   mounted() {
     this.initializeCountry();
-    if (this.selectedCountryCode && this.activeCountry) {
-      this.phone = "+" + this.activeCountry.dialCode;
-    }
     this.$emit("onSelect", this.activeCountry);
   },
   data() {
@@ -203,18 +196,6 @@ export default {
     };
   },
   computed: {
-    mode() {
-      if (!this.phone) {
-        return "";
-      }
-      if (this.phone[0] === "+") {
-        return "code";
-      }
-      if (this.phone[0] === "0") {
-        return "prefix";
-      }
-      return "normal";
-    },
     filteredCountries() {
       // List countries after filtered
       if (this.onlyCountries.length) {
@@ -292,10 +273,7 @@ export default {
     },
     choose(country) {
       this.activeCountry = country;
-      if (this.selectedCountryCode && country) {
-        this.phone = "+" + country.dialCode;
-      }
-      this.$emit("onChange", this.activeCountry);
+      this.$emit("onSelect", this.activeCountry);
     },
     toggleDropdown() {
       if (this.disabled) {

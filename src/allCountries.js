@@ -1265,6 +1265,6 @@ const allCountries = [
 
 export default allCountries.map(([name, iso2, dialCode]) => ({
   name,
-  iso2,
+  iso2: iso2.toUpperCase(),
   dialCode
 }));
