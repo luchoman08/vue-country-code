@@ -38,7 +38,7 @@ Checkout Demo at [Github pages](https://mon-imitator.github.io/vue-country-code/
   <template>
   ...
      <vue-country-code
-                    @onSelect="onSelect(country)"
+                    @onSelect="onSelect"
                     <!-- optional -->
                     :preferredCountries="['vn', 'us', 'gb']">
      </vue-country-code>
