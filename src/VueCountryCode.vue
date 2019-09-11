@@ -246,6 +246,7 @@ export default {
       if (!this.disabledFetchingCountry) {
         getCountry().then(res => {
           this.activeCountry = this.findCountry(res) || this.activeCountry;
+          this.$emit("onSelect", this.activeCountry);
         });
       }
     },
